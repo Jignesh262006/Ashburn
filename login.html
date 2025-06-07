@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <h2>Login</h2>
+                <form id="Login">
+                    <div class="input">
+                        <label for="Email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email Id" required>
+                    </div>
+                    <div class="input">
+                        <label for="Password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" placeholder="Enter password" required />
+                            <span class="toggle" onclick="togglePassword()">👁️</span>
+                          </div>        
+                    </div>
+                    <button type="submit" id="home.html">Login</button>
+                    <div class="links">
+                        <a href="forgetPassword.html">Forgot Password?</a> |
+                        <a href="main.html">Don't have an account?</a>
+                    </div>
+
+                     </form>
+        </div>
+    </div>
+
+
+    <script>
+        function togglePassword(){
+        const password = document.getElementById("password");
+        password.type = password.type === "password" ? "text" : "password";
+        }
+
+
+
+
+
+        document.getElementById("Login").addEventListener("submit",function(e){
+            e.preventDefault();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            //Duplicate 
+            const validEmail="cjignesh800@gmail.com";
+            const validPassword="1234";
+            
+            if(email === validEmail && password === validPassword){
+
+                localStorage.setItem("isLoggedIn", "true");
+                window.location.href="home.html";
+            }
+
+        });
+
+        </script>        
+</body>
+</html>
