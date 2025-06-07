@@ -547,8 +547,12 @@ a{
 .discord p{
    color: #E6CDF2;
 }
-
-
+.buy1{
+    display: none;
+}
+.buy2{
+    display: none;
+}
 
 
 
@@ -585,6 +589,20 @@ a{
           align-items: center;
           margin-left: 0;
           margin-right: 0;
+        }
+        .buy1{
+            display: block;
+            width: 100px;
+        }
+        .buy2{
+            display: block;
+            width: 100px;
+        }
+        .buy4{
+            display: none;
+        }
+        .buy5{
+            display: none;
         }
 
         .submit button {
